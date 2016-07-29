@@ -13,6 +13,7 @@
     "ejs": "~0.8.5",
     "express": "~3.4.8",
     "mongoose": "~3.6.14",
+    "multi-views": "^0.1.1",
     "socket.io": "^1.4.8",
     "teqlabs-testify": "~0.2.0"
   },
