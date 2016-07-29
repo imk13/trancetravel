@@ -1,0 +1,29 @@
+<div class="row _nom">
+  <div ui-view="store-view"></div>
+  <div class="content-inner-container">
+        <div class="row top-navigation _nom">
+          <div ui-view="top-nav"></div>
+        </div>
+      <div class="row _nom">
+      <div id="wrapper" class="">
+          <div class="side-navigation">
+              <div ui-view="side-nav"></div>
+           </div>
+          <div id="page-content-wrapper" class="content-container">
+            <div class="row _nom">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+              </div>
+            </div>
+              <div ui-view="content-view"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- <footer class="footer" style="z-index: 10000;">
+        <div align="center" id="hlp-adwords"style="width : 100%;border-top:2px solid #f1a327;background: #fff8e7;color: #da9220;font-size: 15px;">
+            <span id="close-hlp-adwords" class="set-cursor pull-right" ng-click="hideThis($event)">&#9447;</span>
+            <a href="http://app.indifi.com/new-application?name=delhivery" ng-click="indifyLoan('indify_loan' , 'http://app.indifi.com/new-application?name=delhivery')" target="_newtab" style="padding: 3px 10px;display: block;color: #da9220;">Need funds to grow your business? Apply here to get unsecured loans.
+           </a>
+        </div>
+    </footer> -->
+</div>

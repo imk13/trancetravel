@@ -1,0 +1,15 @@
+<div class="side-nav-inner-container" ng-init="getActiveUsers()">
+        <!-- Sidebar -->
+         <div id="sidebar-wrapper"  class="nav-style" >
+            <ul class="sidebar-nav">
+               <li ng-repeat="(idx, activeUser) in _activeUserList" ng-class="{'active':_toggleClass == idx }" ng-click="updateTopSideBar(idx , activeUser.email)">
+                  <a>
+                     <div title="{{activeUser.email}}" class="" aria-hidden="true">{{activeUser.first_name + ' ' + activeUser.last_name}}</div>
+                     <!-- <div title="{{activeUser.email}}"><span>{{activeUser.email}}</span></div> -->
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <!-- /#sidebar-wrapper -->
+    </div>
+</div>

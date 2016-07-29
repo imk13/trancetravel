@@ -1,0 +1,58 @@
+<div class="top-nav-inner-container">   
+   <nav class="navbar navbar-fixed-top mynav-bar">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <a class="pull-left left-menu-toggle" href="#menu-toggle" id="menu-toggle">
+               <i class="fa fa-bars"></i></a>
+               <a class="navbar-brand" ng-click="goHome()"><h1 class="_nom" style="margin-top: 5px;">POS</h1></a>
+               <button aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle collapsed btn btn-info" type="button">
+               <i class="fa fa-user"></i>
+               </button>
+            </div>
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+               <!--h2 class="header-title">
+                  {{ navheaderTitle }}
+               </h2 -->
+               <div class="header-search pull-right">
+                  <!--h3 class="header-title header-store">
+                    Store : {{ storeSelected }}
+                  </h3-->
+                
+                  <div class="drp-icn">
+                    <!-- <button class="btn btn-default sync-class" ng-class="{ active : _server_sync == 0 }" ng-click="syncWithServer(true, true)" ng-disabled="sync_disable">
+                      Sync
+                    </button> -->
+                    <!-- <select class="select select-store" ng-change="selectStore(_storeIndex, false)" ng-click=storeSelectClick() ng-model="_storeIndex" ng-disabled="_selectStoreDisable">
+                      <option value="" disabled default>Select your store</option>
+                      <option  value ="{{ $index }}" ng-repeat="store in _storeList" ng-disabled="store.store_lock">{{ store.name }}</option>
+                    </select> -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><h3 class="_nom" style="margin-top: 12%;">Delhi Police</h3></li>
+                        <li class="dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle logged-username">
+                              <span>{{ _loggedUser }}</span>
+                              <span title="User online status" class="internet-status" ng-class="onlineBrowser == 'online' ? 'online' : 'offline'"></span>
+                              <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a ng-click="billingInvoices()">Invoices on hold</a></li>
+                                <li><a ng-click="storeSetting()">Settings</a></li>
+                                <li class="divider" role="separator"></li>
+                                <li><a ng-click="logout()">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <script>
+          $("body").on('click' , "#menu-toggle" , function (e) {
+             e.preventDefault();
+          //   console.log(this);
+             $("#wrapper").toggleClass("toggled");
+          });       
+      </script>
+</div>

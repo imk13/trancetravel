@@ -1,0 +1,33 @@
+<div class="inner-container">
+	<div class="row _nom">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-left: 60px;">
+			<form name="gmap-search-form" role="form" class="input-group">
+				<input id="pac-input" type="text" name="map-search" ng-model="dashboard.gmapSearch" ng-keyup="dashboard.searchPlaces($event, dashboard.gmapSearch)" class="controls form-group " placeholder="Find place" style="height: 30px;width: 50%;padding: 0px 10px;" />
+				<!-- <span class="btn btn-info input-group-addon" ng-click="dashboard.searchPlaces($event, dashboard.gmapSearch)">Search</button> -->
+			</form>
+		</div>
+	</div>
+	<div class="_nom" style="padding: 5px 10px;">
+		<!-- <h1 class="_txt _c">zizZ Travel</h1> -->
+		<ng-map id="googlemap" center="28.7483894, 77.2060241" map-options="dashboard.mapOptions" gmap-loaded="dashboard.getLoadedMap(map)" ng-click="setMapCenter()" >
+			<marker id='metro-{{metroValue.city}}-{{metroIdx+1}}' marker-options='metroValue' ng-repeat='(metroIdx , metroValue) in dashboard.indiaMetroMarker' position='[{{metroValue.lat}} , {{metroValue.lng}}]' ng-click="dashboard.setMapCenter()" title='{{metroValue.city}}'></marker>
+			<shape type="circle" radius="radius" position="metroCity.gps" draggable="metroCity.idx"></shape>
+		</ng-map>
+		<!-- <ng-map center="28.7483894, 77.2060241" zoom="4" on-click="dashboard.setMapCenter(event)" on-zoom_changed="dashboard.zoomChanged()" style="height:550px">
+			<marker id="metro-{{metroValue.city}}-{{metroIdx+1}}" ng-repeat="(metroIdx , metroValue) in dashboard.indiaMetroMarker" position="[{{metroValue.lat}} , {{metroValue.lng}}]" on-click="dashboard.showInfoWindow(event, metroValue, metroIdx)" title="{{metroValue.city}}"></marker>
+			<marker id="metro-{{metroValue.city}}-{{metroIdx+1}}" ng-repeat="(metroIdx , metroValue) in dashboard.searchMarker" position="[{{metroValue.lat}} , {{metroValue.lng}}]" on-click="dashboard.showInfoWindow(event, metroValue, metroIdx)" title="{{metroValue.city}}"></marker>
+			<shape custom-radius="dashboard.radius" name="circle" id="metrocircle" stroke-color='#FF0000' stroke-weight="1" center="{{dashboard.clatlng}}" radius="{{dashboard.radius}}" on-click="dashboard.getMapRadius()" draggable="true" on-dragstart="dashboard.cMapDragStart(event)" on-drag="dashboard.cMapDragging(event)" on-dragend="dashboard.cMapDragEnd(event)" editable="true">
+    		</shape>
+    		<info-window id="metro-miw">
+		        <div ng-non-bindable="">
+			        id: {{"metro-" + dashboard.metroCity.city + "-" + (dashboard.metroCity.idx + 1) }}<br/>
+			        name: {{dashboard.metroCity.city}}<br/>
+			        Position 1: {{dashboard.metroCity.gps}}<br/>
+			        Position 2: {{anchor.getPosition()}}<br/>
+			        Position 3: {{dashboard.map.markers["metro-" + dashboard.metroCity.city + "-" + (dashboard.metroCity.idx + 1)].getPosition()}}<br/>
+			        <a href="#" ng-click="dashboard.insideInfoWindow()">Click Here</a>
+		        </div>
+	    	</info-window>
+		</ng-map> -->
+	</div>
+</div>

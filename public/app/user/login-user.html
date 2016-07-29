@@ -1,0 +1,40 @@
+<!--login-starts-->
+<div class="container-fluid">
+    <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4  col-sm-5  col-xs-12 login-form">
+        <h3 class="text-center login-label">Login</h3>
+        <div class="row _nom">
+            <div class="col-lg-6 col-md-6 col-sm-6 _nopm">
+                <button ng-click="fbLogin()" class="btn btn-info">facebook-login</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 _nopm">
+                <button ng-click="googleLogin()" class="btn btn-danger pull-right" >google-login</button>
+            </div>
+        </div>
+        <br>
+        <form class="login-form-setting">
+            <div class="form-group form-group-lg">
+                <!--<label for="exampleInputEmail1">Email address</label>-->
+                <input type="text" class="no-border form-control bg-primary" id="exampleInputEmail1" ng-model = "auth.user" placeholder="Email">
+            </div>
+            <div class="form-group form-group-lg">
+                <!--<label for="exampleInputPassword1">Password</label>-->
+                <input type="password" class="no-border form-control" id="exampleInputPassword1" ng-model = "auth.password" placeholder="Password">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" ng-click="auth.login()">LOGIN</button>
+            <div class="row _nom">
+                <div class="col-lg-6 col-md-6 col-sm-6 _nopm">
+                    <div id="forgot-password" class="forgot-password-class" ng-click="forgotPassword()">
+                        <a>Forgot Password</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 _nopm">
+                    <div id="create-account" class="forgot-password-class pull-right" ui-sref="home.account">
+                        <a>Create Account</a>
+                    </div>  
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /login-ends -->

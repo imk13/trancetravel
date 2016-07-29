@@ -1,0 +1,14 @@
+<div class="inner-container">
+	<div class="row _nom">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-left: 60px;">
+			<form name="gmap-search-form" role="form" class="input-group">
+				<input id="pac-input" type="text" name="map-search" ng-model="dashboard.gmapSearch" ng-keyup="dashboard.searchPlaces($event, dashboard.gmapSearch)" class="controls form-group " placeholder="Find place" style="height: 30px;width: 50%;padding: 0px 10px;visibility:hidden;" />
+				<!-- <span class="btn btn-info input-group-addon" ng-click="dashboard.searchPlaces($event, dashboard.gmapSearch)">Search</button> -->
+			</form>
+		</div>
+	</div>
+	<div class="_nom" style="padding: 5px 10px;">
+		<div id="gmap" style="height:500px;"></div>
+		<div id="running-coords" title="approximate coordinates"></div>
+	</div>
+</div>

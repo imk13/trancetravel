@@ -1,0 +1,28 @@
+{
+  "name": "tranceTravel",
+  "version": "1.0.0",
+  "private": true,
+  "readme": "README.md",
+  "scripts": {
+    "start": "clear;node app.js",
+    "test": "clear;node tests/main.js"
+  },
+  "dependencies": {
+    "bcrypt": "~*.*.*",
+    "connect-mongo": "~0.4.0",
+    "ejs": "~0.8.5",
+    "express": "~3.4.8",
+    "mongoose": "~3.6.14",
+    "socket.io": "^1.4.8",
+    "teqlabs-testify": "~0.2.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-develop": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.6.0",
+    "request": "~2.33.0",
+    "time-grunt": "~0.1.1",
+    "load-grunt-tasks": "~0.2.0"
+  }
+}

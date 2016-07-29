@@ -1,0 +1,34 @@
+<div title="Create Account" class='row no-margin' visible="accountFlag">
+	<div class="new-account col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-0 col-xs-12 table-bordered">
+	    <form name="accountForm" class="account-form" role="form">
+	    	<div class="form-group">
+	        	<label for="userphone">Phone No.</label>
+	        	<input name="phone" ng-model="newUser.phone" type="text" class="form-control" id="userphone" ng-change="userCheck()" placeholder="Phone No. *" required />
+	        	<span ng-show="form.phone.$dirty && form.phone.$error.required">Phone is required</span>
+	      	</div>
+	    	<div class="form-group">
+	        	<label for="username">Customer Name</label>
+	        	<input name="name" ng-model="newUser.first_name" type="text" class="form-control" id="firstname" placeholder="First name"/>
+	        	<br>
+	        	<input name="name" ng-model="newUser.last_name" type="text" class="form-control" id="lastname" placeholder="Last name"/>
+	        	  <span ng-show="(form.name.$dirty  && form.name.$error.required)">Name is required</span>
+	      	</div>
+	      	<div class="form-group">
+	        	<label for="useremail">Email</label>
+	        	<input name="email" ng-model="newUser.email" type="email" class="form-control" id="useremail" placeholder="Enter email *" required />
+	        	<span ng-show="(form.email.$dirty && form.email.$error.required)">Email is required</span>
+	      	</div>
+	      	<div class="form-group">
+	        	<label for="userpassword1">Password</label>
+	        	<input name="password" ng-model="newUser.password1" type="password" class="form-control" id="userpassword1" placeholder="Password *" required />
+	        	<span ng-show="form.password.$dirty && form.password.$error.required">{{ newError }}</span>
+	      	</div>
+	      	<div class="form-group">
+	        	<label for="userpassword2"></label>
+	        	<input name="confirm-password" ng-model="newUser.password2" type="password" class="form-control" id="userpassword2" placeholder="Confirm password *" required />
+	        	<span ng-show="form.phone.$dirty && form.phone.$error.required">{{ newError }}</span>
+	      	</div>
+	      	<button type="submit" class="btn btn-primary btn-secondary" ng-click="submitNewUserData()">Submit</button>
+	    </form>
+	</div>
+</div>

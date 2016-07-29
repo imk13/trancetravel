@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tranceTravel</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="/css/default.css"></link>
+	<link rel="stylesheet" href="/css/custom.css"></link>
+	<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"></link>
+	<style type="text/css">
+		.require-progressbar{/*margin-top: 1px;*/width: 0%;height: 2px;background-color: rgba(0, 187, 235, 0.9);/*background-image: linear-gradient(135deg, #26BDA6, #FF9F65, #DED37E);*/box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.7);}
+	</style>
+</head>
+<body ng-controller="tranceAppController">
+	<!-- socket:js -->
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<!-- socket:js end-->
+	<!-- bower:js -->
+		<script src="/bower_components/requirejs/require.js" data-main="app/main-live.js"></script>
+    <!-- endbower -->
+	<div class="container-fluid">
+		<div id="module-load-progress" class="require-progressbar">
+            <!-- <div class="pull-right progress-now"></div> -->
+        </div>
+		<div ui-view="base-view"></div>
+	</div>
+	<script type="text/javascript">
+		console.log("loadin app...");
+	</script>
+	<script>
+		var socket = io.connect('http://localhost:9090');
+			socket.on('news', function (data) {
+			console.log(data);
+			socket.emit('ping', { my: 'Hello Mukesh!' });
+		});
+	</script>
+</body>
+</html>

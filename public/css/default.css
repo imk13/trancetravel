@@ -1,0 +1,57 @@
+body{
+	font-family: Helvetica , sans-serif;
+	margin: 0;
+	padding: 0;
+	/*box-shadow: 5px 5px 5px transparent;*/
+	background-color: #ccc transparent;
+	font-size: medium;
+	text-align: left;
+}
+
+h1, h2 , h3 {
+	color: rgb(128, 128, 128) !important;
+}
+
+ul{
+	list-style: none;
+}
+
+p{
+	font-size: 14px;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: blink !important;
+}
+
+.form-up-group{
+	margin-top: 15px;
+}
+
+._3d{
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+	/*border-radius: 5px;*/
+}
+._nopm{
+	margin: 0;
+	padding: 0
+}
+._nop{
+	padding: 0;
+}
+._nom{
+	margin: 0;
+}
+._txt {
+	color: rgb(128, 128, 128);
+}
+._txt._c{
+	text-align: center;
+}
+._txt._l{
+	text-align: left;
+}
+._txt._r{
+	text-align: right;
+}
